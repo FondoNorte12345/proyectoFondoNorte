@@ -15,7 +15,8 @@
         <input type="submit" value="Ingresar">
     </form>
 
-    <input type="button" onclick="location.href='registracion.php'" value="Registrarse">
+    <button type="button" class="btn btn-outline-primary" onclick="location.href='registracion.php'">Registrarse</button>
+    
 </body>
 
 </html>
