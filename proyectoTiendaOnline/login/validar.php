@@ -5,19 +5,19 @@ $pass = $_POST['pass'];
 
 
 
-include 'db.php';
+include '../config/db.php';
 
-$query = "SELECT * FROM users WHERE nombre = '$user' AND pass = '$pass'";
-$result = mysqli_query($conection, $query);
+$query = "SELECT * FROM USUARIOS WHERE NOM_USUARIO = '$user' AND PASS = '$pass'";
+$result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
 if ($row) {
     session_start();
     $_SESSION['user'] = $user;
-    header('Location: home.php');
+    header('Location: ../index.php');
 } else {
     ?>
     <?php
-    include('index.php');
+    include('../index.php');
     ?>
     <h1>Usuario o contraseña incorrectos</h1>
     <?php
