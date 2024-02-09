@@ -1,29 +1,36 @@
 <?php
 
-$user = $_POST['user'];
-$pass = $_POST['pass'];
+$user = $_POST['email'];
+$pass = $_POST['password'];
+$nom = $_POST['nombre'];
+$ap1 = $_POST['apellido1'];
+$ap2 = $_POST['apellido2'];
+$tel = $_POST['telefono'];
+$dir = $_POST['direccion'];
+$cp = $_POST['cp'];
+$fnac = $_POST['fnaci'];
 
 
 
-include 'db.php';
+include '../config/db.php';
 
-$insert = "INSERT INTO users (nombre, pass) VALUES ('$user', '$pass')";
+$insert = "INSERT INTO USUARIOS (NOM_USUARIO, PASS, NOMBRE, APELLIDO1, APELLIDO2, TELEFONO, DIRECCION, CP, FNACI) VALUES ('$user', '$pass' , '$nom', '$ap1', '$ap2', '$tel', '$dir', '$cp', '$fnac')";
 
-if (mysqli_query($conection, $insert)) {
+if (mysqli_query($con, $insert)) {
     echo "usuario creado";
     sleep(3);
 }
 
-$query = "SELECT * FROM users WHERE nombre = '$user' AND pass = '$pass'";
-$result = mysqli_query($conection, $query);
+$query = "SELECT * FROM USUARIOS WHERE NOM_USUARIO = '$user' AND PASS = '$pass'";
+$result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
 if ($row) {
     session_start();
     $_SESSION['user'] = $user;
-    header('Location: home.php');
+    header('Location: index.php');
 }
 
 
 mysqli_free_result($result);
-mysqli_close($conection);
+mysqli_close($con);
 

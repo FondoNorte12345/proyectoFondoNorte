@@ -14,6 +14,16 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        input {
+            width: 400px;
         }
     </style>
 </head>
@@ -23,22 +33,45 @@
         <?php include('../nav/nav.php') ?>
     </div>
     <div id="formulario">
-    <form action="registrarUsuario.php" method="post">
+        <form action="registrarUsuario.php" method="post">
             <fieldset>
                 <legend>Registrar mi cuenta</legend>
-                <div class="form-group">
+                <!-- Email -->
+                <div class="contenidor-input">
                     <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-                    <input type="email" name="user" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small><br>
-                    <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
-                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1"
-                        placeholder="Password" autocomplete="off">
+                    <input type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email" name="email">
                 </div>
+                <!-- Password -->
+                <div class="contenidor-input">
+                    <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Password" autocomplete="off" name="password">
+                </div>
+                <!-- Nombre -->
+                <label class="form-label mt-4" for="inputNombre">Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre" id="inputNombre" name="nombre">
+                <!-- Primer Apellido -->
+                <label class="form-label mt-4" for="inputApellido1">Primer apellido</label>
+                <input type="text" class="form-control" placeholder="Primer apellido" id="inputApellido1"  name="apellido1">
+                <!-- Segundo Apellido -->
+                <label class="form-label mt-4" for="inputApellido2">Segundo apellido</label>
+                <input type="text" class="form-control" placeholder="Segundo apellido" id="inputApellido2" name="apellido2">
+                <!-- Fecha de Nacimiento -->
+                <label class="form-label mt-4" for="inputFechaNacimiento">Fecha de nacimiento</label>
+                <input type="text" class="form-control"  id="inputFechaNacimiento" name="fnaci" pattern="^(?:1[9]|[2][0])\d{2}\-(?:0[1-9]|1?[012])\-(?:3[01]|[12][0-9]|0?[1-9])" placeholder="YYYY-MM-DD">
+                <!-- Teléfono -->
+                <label class="form-label mt-4" for="inputTelefono">Teléfono</label>
+                <input type="text" class="form-control" placeholder="Teléfono" id="inputTelefono" name="telefono">
+                <!-- Dirección -->
+                <label class="form-label mt-4" for="inputDireccion">Dirección</label>
+                <input type="text" class="form-control" placeholder="Dirección" id="inputDireccion" name="direccion">
+                <!-- C.P. -->
+                <label class="form-label mt-4" for="inputCP">C.P.</label>
+                <input type="text" class="form-control" placeholder="C.P." id="inputCP" name="cp">
                 <br>
-                <button type="submit" class="btn btn-outline-primary">Registrarse</button>
             </fieldset>
+            <button type="submit" class="btn btn-outline-primary">Registrarse</button>
         </form>
     </div>
 </body>
