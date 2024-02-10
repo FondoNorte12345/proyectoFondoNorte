@@ -28,10 +28,14 @@ require_once("..\config\db.php");
 $query = 'SELECT PRODUCTOS.NOM_PRODUCTO ,PRODUCTOS.DESC_PRODUCTO,  PRODUCTOS.PRECIO, CATEGORIA.NOM_CATEGORIA  FROM PRODUCTOS INNER JOIN CATEGORIA ON CATEGORIA.COD_CATEGORIA = PRODUCTOS.COD_CATEGORIA;';
 $consulta = $con->query($query);
 
-/* convertir el resultado a un array asociativo */
-$filas = $consulta->fetch_all(MYSQLI_ASSOC);
+/* convertir el resultado a un JSON */
+$filas = array();
 
-$filas = array($filas);
+while ($row = $consulta->fetch_assoc()) {
+    $filas[] = $row;
+}
+
+
 
 
 
