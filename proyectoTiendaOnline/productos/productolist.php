@@ -25,11 +25,14 @@ FOREIGN KEY (COD_CATEGORIA) REFERENCES CATEGORIA(COD_CATEGORIA)
 
 require_once("..\config\db.php");
 
-$query = "SELECT * FROM PRODUCTOS";
+$query = 'SELECT PRODUCTOS.NOM_PRODUCTO ,PRODUCTOS.DESC_PRODUCTO,  PRODUCTOS.PRECIO, CATEGORIA.NOM_CATEGORIA  FROM PRODUCTOS INNER JOIN CATEGORIA ON CATEGORIA.COD_CATEGORIA = PRODUCTOS.COD_CATEGORIA;';
 $consulta = $con->query($query);
 
 /* convertir el resultado a un array asociativo */
 $filas = $consulta->fetch_all(MYSQLI_ASSOC);
+
+$filas = array($filas);
+
 
 
 

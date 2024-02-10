@@ -16,13 +16,23 @@ require_once("productolist.php");
     <div id="list"></div>
     <script>
         // datos de la consulta trasformarlo en JSON
-        let filas = <?php echo json_encode($filas); ?>
 
-        filas.forEach(element => {
-            for (const key in element) {
-                document.getElementById("list").innerHTML += key + " : " + element[key] + "<br>";
-            }
-        })
+    let filas = <?= json_encode($filas); ?>;
+    filas = filas[0];
+    console.log(filas);
+
+    let list = document.getElementById("list");
+
+    for (let i = 0; i < filas.length; i++) {
+        list.innerHTML += `
+        <div>
+            <h1>${filas[i].NOM_PRODUCTO}</h1>
+            <p>${filas[i].DESC_PRODUCTO}</p>
+            <p>${filas[i].PRECIO}</p>
+            <p>${filas[i].NOM_CATEGORIA}</p>
+        </div>
+        `
+    }
     </script>
 </body>
 </html>
