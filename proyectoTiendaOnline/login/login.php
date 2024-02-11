@@ -21,7 +21,7 @@
 
 <body>
     <div>
-        <?php include('../nav/nav.php') ?>
+        <?php require_once('../nav/nav.php') ?>
     </div>
     <div id="formulario">
         <form action="validar.php" method="post">

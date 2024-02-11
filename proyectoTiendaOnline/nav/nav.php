@@ -1,3 +1,10 @@
+<header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</header>
+
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Aqui hay que añadir al log</a>
@@ -12,13 +19,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/PROJECTOTIENDAONLINE/proyectoFondoNorte/proyectoTiendaOnline/login/login.php">Mi cuenta</a>
+                    <a class="nav-link" href="http://localhost/PROJECTOTIENDAONLINE/proyectoFondoNorte/proyectoTiendaOnline/login/miCuentaControl.php">Mi cuenta</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Mi carrito</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="http://localhost/PROJECTOTIENDAONLINE/proyectoFondoNorte/proyectoTiendaOnline/login/logout.php">Logout</a>
                 </li>
             </ul>
             <form class="d-flex">

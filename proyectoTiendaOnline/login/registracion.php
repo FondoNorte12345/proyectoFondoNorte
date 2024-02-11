@@ -63,9 +63,6 @@
                 <!-- Teléfono -->
                 <label class="form-label mt-4" for="inputTelefono">Teléfono</label>
                 <input type="text" class="form-control" placeholder="Teléfono" id="inputTelefono" name="telefono">
-                <!-- Dirección -->
-                <label class="form-label mt-4" for="inputDireccion">Dirección</label>
-                <input type="text" class="form-control" placeholder="Dirección" id="inputDireccion" name="direccion">
                 <!-- C.P. -->
                 <label class="form-label mt-4" for="inputCP">C.P.</label>
                 <input type="text" class="form-control" placeholder="C.P." id="inputCP" name="cp">

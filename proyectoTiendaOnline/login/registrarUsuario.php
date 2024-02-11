@@ -6,15 +6,14 @@ $nom = $_POST['nombre'];
 $ap1 = $_POST['apellido1'];
 $ap2 = $_POST['apellido2'];
 $tel = $_POST['telefono'];
-$dir = $_POST['direccion'];
 $cp = $_POST['cp'];
 $fnac = $_POST['fnaci'];
 
 
 
-include '../config/db.php';
+require_once '../config/db.php';
 
-$insert = "INSERT INTO USUARIOS (NOM_USUARIO, PASS, NOMBRE, APELLIDO1, APELLIDO2, TELEFONO, DIRECCION, CP, FNACI) VALUES ('$user', '$pass' , '$nom', '$ap1', '$ap2', '$tel', '$dir', '$cp', '$fnac')";
+$insert = "INSERT INTO USUARIOS (NOM_USUARIO, PASS, NOMBRE, APELLIDO1, APELLIDO2, TELEFONO,CP, FNACI) VALUES ('$user', '$pass' , '$nom', '$ap1', '$ap2', '$tel', '$cp', '$fnac')";
 
 if (mysqli_query($con, $insert)) {
     echo "usuario creado";
@@ -27,7 +26,7 @@ $row = mysqli_fetch_array($result);
 if ($row) {
     session_start();
     $_SESSION['user'] = $user;
-    header('Location: index.php');
+    header('Location: ../index.php');
 }
 
 
