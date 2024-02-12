@@ -42,10 +42,7 @@ $con->close();
     </div>
 
     <script>
-
-
-
-        let filas = <?= json_encode($filas); ?>;
+        let filas = <?php json_encode($filas); ?>;
         console.log(filas);
         let list = document.getElementById("list");
 
@@ -93,7 +90,7 @@ $con->close();
             for (let i = 0; i < filas.length; i++) {
                 console.log(JSON.stringify(filas[i].COD_CATEGORIA));
                 if (filas[i].COD_CATEGORIA == id) {
-                    
+
                     list.innerHTML += `
                     <div class="card mb-3" id="card">
         <h3 class="card-header">${filas[i].NOM_PRODUCTO}</h3>
@@ -124,7 +121,6 @@ $con->close();
                 }
             }
         }
-
     </script>
 </body>
 

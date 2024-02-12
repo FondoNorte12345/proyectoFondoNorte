@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\css\bootstrap.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
     <title>login</title>
     <style>
         #formulario {
@@ -30,7 +29,7 @@
 
 <body>
     <div>
-        <?php include('../nav/nav.php') ?>
+        <?php require('../nav/nav.php') ?>
     </div>
     <div id="formulario">
         <form action="registrarUsuario.php" method="post">
@@ -39,27 +38,25 @@
                 <!-- Email -->
                 <div class="contenidor-input">
                     <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                 </div>
                 <!-- Password -->
                 <div class="contenidor-input">
                     <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Password" autocomplete="off" name="password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off" name="password">
                 </div>
                 <!-- Nombre -->
                 <label class="form-label mt-4" for="inputNombre">Nombre</label>
                 <input type="text" class="form-control" placeholder="Nombre" id="inputNombre" name="nombre">
                 <!-- Primer Apellido -->
                 <label class="form-label mt-4" for="inputApellido1">Primer apellido</label>
-                <input type="text" class="form-control" placeholder="Primer apellido" id="inputApellido1"  name="apellido1">
+                <input type="text" class="form-control" placeholder="Primer apellido" id="inputApellido1" name="apellido1">
                 <!-- Segundo Apellido -->
                 <label class="form-label mt-4" for="inputApellido2">Segundo apellido</label>
                 <input type="text" class="form-control" placeholder="Segundo apellido" id="inputApellido2" name="apellido2">
                 <!-- Fecha de Nacimiento -->
                 <label class="form-label mt-4" for="inputFechaNacimiento">Fecha de nacimiento</label>
-                <input type="text" class="form-control"  id="inputFechaNacimiento" name="fnaci" pattern="^(?:1[9]|[2][0])\d{2}\-(?:0[1-9]|1?[012])\-(?:3[01]|[12][0-9]|0?[1-9])" placeholder="YYYY-MM-DD">
+                <input type="text" class="form-control" id="inputFechaNacimiento" name="fnaci" pattern="^(?:1[9]|[2][0])\d{2}\-(?:0[1-9]|1?[012])\-(?:3[01]|[12][0-9]|0?[1-9])" placeholder="YYYY-MM-DD">
                 <!-- Teléfono -->
                 <label class="form-label mt-4" for="inputTelefono">Teléfono</label>
                 <input type="text" class="form-control" placeholder="Teléfono" id="inputTelefono" name="telefono">

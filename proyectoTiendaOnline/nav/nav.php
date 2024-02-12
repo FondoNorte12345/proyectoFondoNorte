@@ -14,18 +14,18 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="http://localhost/PROJECTOTIENDAONLINE/proyectoFondoNorte/proyectoTiendaOnline/index.php">Home
+                    <a class="nav-link active" href="http://localhost/proyectoFondoNorte/proyectoTiendaOnline/index.php">Home
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/PROJECTOTIENDAONLINE/proyectoFondoNorte/proyectoTiendaOnline/login/miCuentaControl.php">Mi cuenta</a>
+                    <a class="nav-link" href="http://localhost/proyectoFondoNorte/proyectoTiendaOnline/login/miCuentaControl.php">Mi cuenta</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Mi carrito</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/PROJECTOTIENDAONLINE/proyectoFondoNorte/proyectoTiendaOnline/login/logout.php">Logout</a>
+                    <a class="nav-link" href="http://localhost/proyectoFondoNorte/proyectoTiendaOnline/login/logout.php">Logout</a>
                 </li>
             </ul>
             <form class="d-flex">
