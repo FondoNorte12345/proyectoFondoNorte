@@ -42,7 +42,7 @@ $con->close();
     </div>
 
     <script>
-        let filas = <?php json_encode($filas); ?>;
+        let filas = <?= json_encode($filas); ?>;
         console.log(filas);
         let list = document.getElementById("list");
 
