@@ -12,12 +12,9 @@ $fnac = $_POST['fnaci'];
 
 require_once '../config/db.php';
 
-$insert = "INSERT INTO USUARIOS (CORREO, PASS, NOMBRE, APELLIDO1, APELLIDO2, TELEFONO, FNACI) VALUES ('$user', '$pass' , '$nom', '$ap1', '$ap2', '$tel', '$fnac')";
+$insert = "CALL VALIDACION_USUARIO($user, $pass, $nom, $ap1, $ap2, $tel, $fnac)";
 
-if (mysqli_query($con, $insert)) {
-    echo "usuario creado";
-    sleep(3);
-}
+mysqli_query($con, $insert);
 
 $query = "SELECT * FROM USUARIOS WHERE CORREO = '$user' AND PASS = '$pass'";
 $result = mysqli_query($con, $query);

@@ -38,7 +38,7 @@ while ($row = $consulta->fetch_assoc()) {
     </div>
 
     <script>
-        let filas = <?= json_encode($filas); ?>;
+        let filas = <?php echo json_encode($filas); ?>;
         console.log(filas);
         let list = document.getElementById("list");
 
