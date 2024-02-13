@@ -16,4 +16,3 @@ while ($row = $consulta->fetch_assoc()) {
 }
 
 
-$con->close();

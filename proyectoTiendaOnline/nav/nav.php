@@ -22,7 +22,7 @@
                     <a class="nav-link" href="http://localhost/proyectoFondoNorte/proyectoTiendaOnline/login/miCuentaControl.php">Mi cuenta</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mi carrito</a>
+                    <a class="nav-link" href="#" onclick="mostrarCarrito()">Mi carrito</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://localhost/proyectoFondoNorte/proyectoTiendaOnline/login/logout.php">Logout</a>
@@ -35,3 +35,16 @@
         </div>
     </div>
 </nav>
+
+<script>
+    let carrito = false;
+    function mostrarCarrito() {
+        carrito = !carrito;
+        if (carrito == false) {
+            document.getElementById("carrito").style.display = "block";
+        }else{
+            document.getElementById("carrito").style.display = "none";
+        }
+      
+    }
+</script>

@@ -24,8 +24,8 @@ if ($row) {
     <?php
 }
 
-mysqli_free_result($result);
-mysqli_close($conection);
+
+
 
 
 

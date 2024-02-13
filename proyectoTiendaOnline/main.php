@@ -11,29 +11,46 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
     <style>
-        
+        #categorias {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <?php include('nav/nav.php') ?>
+        <?php require('nav/nav.php') ?>
     </div>
-    <div id="containedor-principal">
-        <div id="categorias">
-            <?php require('categorias/categorias.php') ?>
-        </div>
-        <H1>login bien venido
+    <H1>login bienvenido
             <?php session_start();
             echo $_SESSION['user'] ?>
         </H1>
-        <div>
-            <?php require('productos/listarproductos.php') ?>
+    <div id="containedor-principal">
+        
+        
+        <div class="row">
+            <div class="col-2">
+            <div id="categorias">
+                <?php require('categorias/categorias.php') ?>
+            </div>
+            </div>
+            
+            <div class="col-8">
+                <?php require('productos/listarproductos.php') ?>
+            </div>
+            <div class="col-2">
+                <div id="carrito">
+                <?php require('carrito/carrito.php') ?>
+                </div>
+            </div>
         </div>
         <div>
             <?php require('footer/footer.php') ?>
         </div>
     </div>
 </body>
+<script>
+
+</script>
 
 </html>
