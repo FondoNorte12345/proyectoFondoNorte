@@ -14,6 +14,19 @@
         #categorias {
             width: 100%;
         }
+
+        #bienvienido {
+            width: 60%;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        #carrito {
+            position: fixed;
+            right: 0;
+            top: 100px;
+        }
     </style>
 </head>
 
@@ -21,32 +34,35 @@
     <div>
         <?php require('nav/nav.php') ?>
     </div>
-    <H1>login bienvenido
+    <div id="bienvienido">
+        <h1>login bienvenido
             <?php session_start();
             echo $_SESSION['user'] ?>
-        </H1>
-    <div id="containedor-principal">
-        
-        
+        </h1>
+        <div id="carrito">
+            <?php require('carrito/carrito.php') ?>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="containedor-principal">
         <div class="row">
             <div class="col-2">
-            <div id="categorias">
-                <?php require('categorias/categorias.php') ?>
+                <div id="categorias">
+                    <?php require('categorias/categorias.php') ?>
+                </div>
             </div>
-            </div>
-            
+
             <div class="col-8">
                 <?php require('productos/listarproductos.php') ?>
             </div>
             <div class="col-2">
-                <div id="carrito">
-                <?php require('carrito/carrito.php') ?>
-                </div>
+
             </div>
         </div>
-        <div>
-            <?php require('footer/footer.php') ?>
-        </div>
+
+    </div>
+    <div>
+        <?php require('footer/footer.php') ?>
     </div>
 </body>
 <script>

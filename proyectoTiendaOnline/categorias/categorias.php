@@ -5,10 +5,12 @@ require('categorias/categoriasControl.php');
 <style>
     #cuerpoCategorias {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    .button {
-        width: 200%;
+    button {
+        width: 100%;
     }
 </style>
 
