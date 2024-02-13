@@ -23,7 +23,7 @@ while ($row = $consulta->fetch_assoc()) {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+
     }
 
     .card {
@@ -32,11 +32,9 @@ while ($row = $consulta->fetch_assoc()) {
     }
 </style>
 
-<body onload="cargarListado()">
+<body onload="cargarListado(0)">
     <h1>Listado de productos</h1>
     <div id="list">
-
-
     </div>
 
     <script>
@@ -84,9 +82,7 @@ while ($row = $consulta->fetch_assoc()) {
 
         function cargarCategorias(id) {
             list.innerHTML = '';
-
             for (let i = 0; i < filas.length; i++) {
-
                 if (filas[i].COD_CATEGORIA == id || id == 0) {
                     cargarCard(i);
                 }

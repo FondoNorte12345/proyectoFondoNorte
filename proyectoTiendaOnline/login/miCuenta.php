@@ -18,6 +18,9 @@ $usuario = mysqli_fetch_array($result);
 
 
 ?>
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
 
 <body>
     <?php require('../nav/nav.php') ?>
