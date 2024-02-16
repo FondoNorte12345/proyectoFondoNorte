@@ -21,9 +21,7 @@ while ($row = $consultaCarro->fetch_assoc()) {
 
 <head>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
@@ -38,7 +36,6 @@ while ($row = $consultaCarro->fetch_assoc()) {
 
 
 <script>
-
     let productosCarrito = <?= json_encode($productosCarrito); ?>
 
     let ul = document.getElementById('carrito-ul');
@@ -53,11 +50,10 @@ while ($row = $consultaCarro->fetch_assoc()) {
         for (let i = 0; i < productosCarrito.length; i++) {
             cantidad += parseInt(productosCarrito[i].CANTPRODUCTO);
             ul.innerHTML += `<li class="nav-item">${productosCarrito[i].NOM_PRODUCTO} cantidad: ${productosCarrito[i].CANTPRODUCTO}</li>`
-            total +=parseInt(productosCarrito[i].TOTAL);
+            total += parseInt(productosCarrito[i].TOTAL);
         }
 
         ul.innerHTML += `<li class="nav-item">Total: ${total}</li>`
-        
-    }
 
+    }
 </script>

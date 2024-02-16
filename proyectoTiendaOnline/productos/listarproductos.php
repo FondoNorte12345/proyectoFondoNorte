@@ -65,7 +65,7 @@ while ($row = $consulta->fetch_assoc()) {
 </ul>
 <div class="card-body">
 <a href="#" class="card-link">añadir al carrito</a>
-<a href="#" class="card-link">ver detalles</a>
+<a href="productos/verdetalles.php" class="card-link">ver detalles</a>
 </div>
 <div class="card-footer text-muted">
 </div>
@@ -88,8 +88,6 @@ while ($row = $consulta->fetch_assoc()) {
                 }
             }
         }
-
-       
     </script>
 </body>
 
