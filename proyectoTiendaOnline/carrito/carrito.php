@@ -43,6 +43,7 @@ while ($row = $consultaCarro->fetch_assoc()) {
 
     let ul = document.getElementById('carrito-ul');
     let total = 0;
+    let cantidad = 0;
 
     console.log(productosCarrito);
 
@@ -50,6 +51,7 @@ while ($row = $consultaCarro->fetch_assoc()) {
         ul.innerHTML = `<li class="nav-item">No hay productos en el carrito</li>`
     } else {
         for (let i = 0; i < productosCarrito.length; i++) {
+            cantidad += parseInt(productosCarrito[i].CANTPRODUCTO);
             ul.innerHTML += `<li class="nav-item">${productosCarrito[i].NOM_PRODUCTO} cantidad: ${productosCarrito[i].CANTPRODUCTO}</li>`
             total +=parseInt(productosCarrito[i].TOTAL);
         }

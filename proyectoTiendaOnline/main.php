@@ -27,6 +27,16 @@
             right: 0;
             top: 100px;
         }
+
+        #buscador {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #buscador form {
+            width: 50%;
+        }
     </style>
 </head>
 
@@ -34,14 +44,15 @@
     <div>
         <?php require('nav/nav.php') ?>
     </div>
-    <div id="bienvienido">
-        <h1>login bienvenido
-            <?php session_start();
-            echo $_SESSION['user'] ?>
-        </h1>
-        <div id="carrito">
-            <?php require('carrito/carrito.php') ?>
-        </div>
+    <div id="buscador">
+        <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Busqueda</button>
+        </form>
+    </div>
+
+    <div id="carrito">
+        <?php require('carrito/carrito.php') ?>
     </div>
 
     <div class="container-fluid" id="containedor-principal">
@@ -56,7 +67,6 @@
                 <?php require('productos/listarproductos.php') ?>
             </div>
             <div class="col-2">
-
             </div>
         </div>
 
@@ -66,7 +76,6 @@
     </div>
 </body>
 <script>
-
 </script>
 
 </html>
